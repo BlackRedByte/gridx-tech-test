@@ -1,0 +1,44 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Apex Job ID">Apex Job ID</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Status">Status</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Total Batches">Total Batches</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Batches Processed">Batches Processed</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Failures">Failures</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={jobs} for:item="job">
+                <tr key={job.Id} class="slds-hint-parent">
+                    <th data-label="Apex Job ID" scope="row">
+                        <div class="slds-truncate" title={job.Id}>{job.Id}</div>
+                    </th>
+                    <td data-label="Status">
+                        <div class="slds-truncate" title={job.Status}>{job.Status}</div>
+                    </td>
+                    <td data-label="Total Batches">
+                        <div class="slds-truncate" title={job.TotalJobItems}>{job.TotalJobItems}</div>
+                    </td>
+                    <td data-label="Batches Processed">
+                        <div class="slds-truncate" title={job.JobItemsProcessed}>{job.JobItemsProcessed}</div>
+                    </td>
+                    <td data-label="Failures">
+                        <div class="slds-truncate" title={job.NumberOfErrors}>{job.NumberOfErrors}</div>
+                    </td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>
