@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col">
+            <c-weekdays-picker data-id="weekdayspicker"></c-weekdays-picker>
+        </div>
+        <div class="slds-col">
+            <c-time-picker data-id="timepicker"></c-time-picker>
+        </div>
+        <div class="slds-col slds-m-top_small">
+            <button type="submit" class="slds-button slds-button_brand slds-button_stretch"
+                onclick={schedule}>Schedule</button>
+        </div>
+        <div class="slds-col slds-m-top_small">
+            <button type="submit" class="slds-button slds-button_brand slds-button_stretch" 
+                onclick={launchnow}>Launch Now</button>
+        </div>
+    </div>
+</template>
